@@ -1,0 +1,283 @@
+body {
+    background-color: var(--clr-cyan-200);
+    font-family: 'League Spartan', sans-serif;
+}
+
+.wrapper {
+    min-height: 100vh;
+    width: 100%;
+    display: grid;
+    place-items: start center;
+}
+
+.container {
+    width: min(90%, 80em);
+    transform: translateY(9em);
+}
+
+.background-img {
+    min-width: 100%;
+    height: 11.5em;
+    background-color: var(--clr-cyan-100);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.background-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.filter-bar {
+    padding: 1.2em;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: hsla(180, 29%, 50%, 0.2) 0px 15px 25px, hsla(180, 29%, 50%, 0.05) 0px 5px 10px;
+}
+
+.filter-div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.filter-clear {
+    height: min-content;
+    font-size: 1rem;
+    padding: 0.5em;
+    font-weight: 700;
+    color: var(--clr-cyan-400);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.18s, underline 0.18s;
+}
+
+.filter-clear:hover {
+    color: var(--clr-cyan-100);
+    text-decoration: underline;
+}
+
+.filter-button {
+    background-color: var(--clr-cyan-200);
+    border-radius: 5px;
+    display: flex;
+}
+
+.filter-button p {
+    color: var(--clr-cyan-100);
+    padding: 0.5em 0.8em;
+    font-weight: 700;
+}
+
+.filter-button button {
+    padding: 0.4em 0.7em;
+    background-color: var(--clr-cyan-100);
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.18s;
+}
+
+.filter-button button:hover {
+    background-color: var(--clr-cyan-500);
+}
+
+.info-bar {
+    padding: 3em 2em 2em 2em;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-between;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: hsla(180, 29%, 50%, 0.2) 0px 15px 25px, hsla(180, 29%, 50%, 0.05) 0px 5px 10px;
+}
+
+.info-bar.featured::before {
+    content: '';
+    width: 0.5em;
+    height: 100%;
+    background-color: var(--clr-cyan-100);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.infobar-list {
+    margin-block: 4em;
+    display: grid;
+    gap: 4em;
+}
+
+.pad-top {
+    transform: translateY(4em);
+    margin-bottom: 8em;
+}
+
+.company-img {
+    width: 4em;
+    position: absolute;
+    top: -1.9em;
+}
+
+.company-img img {
+    width: 100%;
+}
+
+.company-info {
+    display: grid;
+    gap: 1em;
+}
+
+.main-label > p {
+    font-weight: 700;
+    color: var(--clr-cyan-100);
+}
+
+.main-feature {
+    display: flex;
+    gap: 0.7em;
+}
+
+.main-feature div {
+    padding: 0.3em 0.7em 0.2em;
+    background-color: var(--clr-cyan-100);
+    border-radius: 20px;
+}
+
+.main-feature p {
+    color: var(--clr-cyan-300);
+    font-weight: 700;
+}
+
+.main-feature div:nth-child(2) {
+    background-color: var(--clr-cyan-500);
+}
+
+.main-label {
+    width: max-content;
+    display: flex;
+    gap: 2.5em;
+    align-items: center;
+}
+
+.company-position {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--clr-cyan-500);
+    transition: color 0.18s;
+    cursor: pointer;
+}
+
+.company-position:hover {
+    color: var(--clr-cyan-100);
+}
+
+.company {
+    width: 14.5em;
+    color: var(--clr-cyan-400);
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1em;
+    gap: 1em;
+    border-top: 1px solid var(--clr-cyan-400);
+}
+
+.filter-box {
+    font-weight: 700;
+    color: var(--clr-cyan-100);
+    border-radius: 5px;
+    background-color: var(--clr-cyan-200);
+    padding: 0.5em 1em;
+    cursor: pointer;
+    transition: background-color 0.18s, color 0.18s;
+}
+
+.filter-box:hover {
+    background-color: var(--clr-cyan-100);
+    color: #ffffff;
+}
+
+@media (min-width: 600px) {
+    .info-bar {
+        padding: 2em;
+    }
+
+    .company-img {
+        width: 5em;
+        position: static;
+    }
+
+
+    .company-img img {
+        height: 100%;
+        display: block;
+    }
+
+    .company-info {
+        gap: 0.8em;
+    }
+
+    .company-detail {
+        display: flex;
+        align-items: center;
+        gap: 2em;
+    }
+
+    .company-position {
+        font-size: 1.4rem;
+    }
+
+    .main-label {
+        gap: 1.1em;
+    }
+
+    .main-label > p {
+        font-size: 1.1rem;
+    }
+
+    .main-feature {
+        font-size: 0.8rem;
+    }
+
+    .filter-box {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .background-img img {
+        content: url(../images/bg-header-desktop.svg);
+    }
+
+    .info-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .filter-list {
+        border: none;
+    }
+
+    .infobar-list {
+        margin-top: 2.5em;
+        gap: 2em;
+    }
+}
