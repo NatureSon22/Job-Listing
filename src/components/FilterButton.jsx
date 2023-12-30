@@ -1,3 +1,5 @@
+import iconremove from '../../images/iconremove.svg'
+
 const FilterButton = ({name, setFilter}) => {
 
     const handleClick = (val) => {
@@ -8,7 +10,7 @@ const FilterButton = ({name, setFilter}) => {
         <div className="filter-button">
             <p>{name}</p>
             <button onClick={() => handleClick(name)}>
-                <img src="images\icon-remove.svg" alt="" />
+                <img src={iconremove} alt="" />
             </button>
         </div>
     )
