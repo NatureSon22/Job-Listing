@@ -1,5 +1,6 @@
 const CompanyDetail = ({ details : { company, logo, isNew, isFeatured, position, postedAt, contract,
     location } }) => {
+
     return (
         <div className="company-detail">
             <div className="company-img">
